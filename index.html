@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f6">
+    <meta name="description" content="Compare a client brief with measured trial work, separate one-off setup from recurring workload, and prepare a clear scope-alignment note.">
+    <title>TrialScope — plan the work after the trial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="src/app.mjs"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#overview" aria-label="TrialScope home">
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span><strong>TrialScope</strong><small>scope, grounded in the work</small></span>
+        </a>
+        <div class="topbar-actions">
+          <span class="local-pill"><i aria-hidden="true"></i> Private · saved in this browser</span>
+          <button class="button button-quiet" type="button" data-action="export-project">Export backup</button>
+          <label class="button button-quiet file-button">Import backup<input id="project-import" type="file" accept="application/json,.json" hidden></label>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-line"></span> Trial-to-retainer workload review</div>
+            <h1 id="page-title">A trial is evidence.<br><em>Use it to set a scope that fits.</em></h1>
+            <p>Compare what was discussed with what the work actually took. Keep recurring delivery separate from one-off setup, then prepare a clear next-step note with your client.</p>
+            <div class="hero-actions">
+              <button class="button button-primary" type="button" data-view="brief">Review the brief <span aria-hidden="true">↗</span></button>
+              <span class="sample-label"><span class="sample-dot"></span> Fictional café sample · synthetic data</span>
+            </div>
+          </div>
+          <aside class="hero-video" aria-label="Product walkthrough video">
+            <div class="video-head"><span class="video-label"><i aria-hidden="true"></i> WATCH THE WALKTHROUGH</span><span class="video-duration">~50 SEC</span></div>
+            <video id="walkthrough-video" controls muted playsinline preload="metadata" aria-label="TrialScope product walkthrough, synthetic café trial example">
+              <source src="media/trialscope-walkthrough.mp4" type="video/mp4">
+              Your browser does not support this walkthrough video.
+            </video>
+            <div class="video-caption"><strong>The brief said six hours.</strong><span>See what the trial actually recorded.</span></div>
+          </aside>
+        </section>
+
+        <section class="workspace" aria-label="TrialScope workspace">
+          <nav class="step-nav" aria-label="Project steps">
+            <button class="step-tab active" type="button" data-view="overview"><span class="step-number">01</span><span>Overview</span></button>
+            <button class="step-tab" type="button" data-view="brief"><span class="step-number">02</span><span>Brief check</span></button>
+            <button class="step-tab" type="button" data-view="trial"><span class="step-number">03</span><span>Trial log</span></button>
+            <button class="step-tab" type="button" data-view="compare"><span class="step-number">04</span><span>Compare</span></button>
+            <button class="step-tab" type="button" data-view="handoff"><span class="step-number">05</span><span>Client handoff</span></button>
+          </nav>
+          <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+          <div id="view-root" tabindex="-1"></div>
+        </section>
+      </main>
+      <footer class="footer"><span>TrialScope</span><span>Personal open-source demo · Synthetic sample · Not client work</span><button type="button" class="text-button" data-action="reset-demo">Reset sample</button></footer>
+    </div>
+    <dialog id="confirm-dialog" class="confirm-dialog">
+      <form method="dialog"><div class="dialog-icon" aria-hidden="true">↻</div><h2>Restore the sample?</h2><p>This replaces the current browser-local project with the original synthetic café example.</p><div class="dialog-actions"><button class="button button-quiet" value="cancel">Keep my work</button><button class="button button-primary" value="confirm">Restore sample</button></div></form>
+    </dialog>
+  </body>
+</html>

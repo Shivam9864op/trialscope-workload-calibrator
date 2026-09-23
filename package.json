@@ -1,0 +1,13 @@
+{
+  "name": "trialscope-workload-calibrator",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "A local-first trial-to-retainer workload calibration tool for freelance social teams",
+  "scripts": {
+    "test": "node --test",
+    "serve": "node scripts/serve.mjs",
+    "record": "node scripts/record-walkthrough.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
