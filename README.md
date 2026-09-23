@@ -10,9 +10,11 @@
 
 The video is the project's only promotional media. There are no generated covers, screenshots, or image assets. The walkthrough is recorded from the running app with the synthetic café sample.
 
-## Try it locally
+## Try the live demo
 
-Run the app on your computer using the steps below. It opens with fictional sample data. Change a value, visit the other steps, and see the calculations update. Data stays in your browser. The app has no account, analytics call, external AI model, or platform connection. Use Export backup if you want a portable project file.
+**[Open TrialScope on GitHub Pages](https://shivam9864op.github.io/trialscope-workload-calibrator/)**
+
+The app opens with fictional sample data. Change a value, visit the other steps, and see the calculations update. Data stays in your browser. The app has no account, analytics call, external AI model, or platform connection. Use Export backup if you want a portable project file.
 
 ## The workflow
 
